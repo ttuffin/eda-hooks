@@ -14,12 +14,17 @@ def _run_ansible_test(command: str):
 
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument('test_type', nargs=1 ,help="The type of test to run. Sanity or unit.")
+    parser.add_argument(
+        "test_type",
+        nargs="?",
+        help="The type of test to run; sanity or units. Default: sanity",
+        default="sanity",
+    )
     args = parser.parse_args(argv)
 
-    retv = _run_ansible_test(args.test_type[0])
+    retv = _run_ansible_test(args.test_type)
     return retv
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     raise SystemExit(main())
