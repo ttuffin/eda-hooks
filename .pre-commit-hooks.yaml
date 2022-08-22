@@ -1,0 +1,6 @@
+-   id: run_ansible_test
+    name: Run ansible-test
+    description: Run ansible-test against a collection.
+    entry: run_ansible_test
+    language: python
+    types: [python]
