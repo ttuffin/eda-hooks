@@ -17,7 +17,8 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument(
         "test_type",
         nargs="?",
-        help="The type of test to run; sanity or units. Default: sanity",
+        help="The type of test to run. Default: sanity",
+        choices=["sanity", "units"],
         default="sanity",
     )
     args = parser.parse_args(argv)
