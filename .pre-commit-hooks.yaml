@@ -3,5 +3,6 @@
     description: Run ansible-test against a collection.
     entry: run_ansible_test
     pass_filenames: false
+    always_run: true
     language: python
     types: [python]
