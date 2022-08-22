@@ -2,5 +2,6 @@
     name: Run ansible-test
     description: Run ansible-test against a collection.
     entry: run_ansible_test
+    pass_filenames: false
     language: python
     types: [python]
