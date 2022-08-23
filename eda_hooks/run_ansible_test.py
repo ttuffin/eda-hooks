@@ -7,7 +7,7 @@ from typing import Sequence
 
 
 def _run_ansible_test(command: str):
-    args = ["ansible-test", command, "--venv"]
+    args = ["ansible-test", command]
     result = subprocess.run(args)
     return result.returncode
 
